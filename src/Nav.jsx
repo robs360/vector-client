@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
     return (
-        <div className="mt-6 w-[97%] mx-auto font-medium flex space-x-2 items-center">
+        <div className="mt-6 w-[97%] mx-auto font-medium flex space-x-3 items-center">
             <NavLink
                 to="/"
                 className={({ isActive, isPending }) =>
@@ -19,9 +19,23 @@ const Nav = () => {
                 }
             >
                 Post Vlog
-            </NavLink><div>
-
-           </div>
+            </NavLink>
+            <NavLink
+                to="/quiz"
+                className={({ isActive, isPending }) =>
+                    isPending ? "font-medium" : isActive ? "rounded-md bg-gray-300 px-2 py-1" : "text-[16px]"
+                }
+            >
+                Quiz Test
+            </NavLink>
+            <NavLink
+                to="/redvlog"
+                className={({ isActive, isPending }) =>
+                    isPending ? "font-medium" : isActive ? "rounded-md bg-gray-300 px-2 py-1" : "text-[16px]"
+                }
+            >
+                read Vlog
+            </NavLink>
         </div>
     )
 }
