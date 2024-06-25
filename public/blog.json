@@ -1,0 +1,33 @@
+[
+    {
+      "name": "Alice Johnson",
+      "image": "https://i.ibb.co/G2psw9q/rev2.jpg",
+      "review": "Great product! Highly recommend to everyone. The build quality is superb and it has been very reliable. Customer service was prompt and helpful."
+    },
+    {
+      "name": "Bob Smith",
+      "image": "https://i.ibb.co/BjmpfsH/rev3.jpg",
+      "review": "The quality is amazing and the service was excellent. I was pleasantly surprised by the quick delivery. Overall, a fantastic purchase experience."
+    },
+    {
+      "name": "Charlie Brown",
+      "image": "https://i.ibb.co/GnK1RmH/rev4.webp",
+      "review": "Very satisfied with my purchase. Will buy again! The user interface is intuitive and easy to navigate. Great value for money. Highly satisfied."
+    },
+    {
+      "name": "Diana Evans",
+      "image": "https://i.ibb.co/j8FjNfK/rev5.webp",
+      "review": "Good value for the price. Customer support was helpful in resolving my queries. The product arrived on time and exceeded my expectations."
+    },
+    {
+      "name": "Edward Turner",
+      "image": "https://i.ibb.co/prJ7mKS/rev6.jpg",
+      "review": "Exceeded my expectations. The delivery was fast too. The product works flawlessly and is exactly as described. I am very happy with my purchase."
+    },
+    {
+      "name": "Fiona Green",
+      "image": "https://i.ibb.co/M5Ps08t/person6.jpg",
+      "review": "Fantastic experience from start to finish. Highly recommend! The product quality is top-notch and the customer service is exceptional. Will definitely purchase again."
+    }
+  ]
+  

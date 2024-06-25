@@ -2,6 +2,8 @@ import React from "react";
 import HomeNav from "./homeNav";
 import banner from '../assets/images/banner2.jpg'
 import Importance from "./Important";
+import Team from "./Team";
+import Review from "./Review";
 const Home = () => {
     const bannerStyle = {
         backgroundImage: `url(${banner})`,
@@ -14,13 +16,13 @@ const Home = () => {
             <div className="w-[98%] flex p-1 md:flex-row flex-col items-center gap-4 justify-end md:w-[80%] min-h-[70vh] mx-auto mt-12" style={bannerStyle}>
                 <div className="md:w-[540px] w-[340px]">
                     <h1 className="text-3xl mb-2 font-medium">Effective Learning</h1>
-                    <p className="mb-4">Effective learning refers to a teaching and
+                    <p className="mb-4">Effective learning refers to a teaching and <br />
                         learning process that not only focuses on
-                        the results achieved by students, but also
+                        the results achieved by students, but also <br />
                         emphasizes the understanding, intelligence,
                         perseverance, and quality of learning.</p>
 
-                    <a className="text-[17px] font-medium"
+                    <a className="text-[17px] text-yellow-100 font-medium"
                         href="https://typeset.io/questions/what-is-effective-learning-5edw2c0x4r">
                         Learn More
                     </a>
@@ -50,6 +52,8 @@ const Home = () => {
                 </div>
             </div>
             <Importance></Importance>
+            <Team></Team>
+            <Review></Review>
         </div>
     )
 }

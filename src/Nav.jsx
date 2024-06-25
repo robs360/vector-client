@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
     return (
-        <div className="mt-6 w-[97%] mx-auto font-medium flex space-x-3 items-center">
+        <div className="mt-6 w-[97%] border-b-2 py-2 border-orange-300 mx-auto font-medium flex space-x-4 items-center">
             <NavLink
                 to="/"
                 className={({ isActive, isPending }) =>

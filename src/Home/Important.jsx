@@ -4,8 +4,8 @@ import write from '../assets/images/writeing.avif'
 import think from '../assets/images/think.jpg'
 const Importance = () => {
     return (
-        <div className="w-[97%] mx-auto mt-12 p-2 text-white">
-            <div className="mb-10 bg-black rounded-md py-2">
+        <div className="w-[97%] mx-auto mt-28 p-2 text-white">
+            <div className="mb-16 bg-black rounded-md py-2">
                 <h1 className="text-3xl text-center font-medium">Importance of a coaching</h1>
                 <p className="mt-2 text-center">Reading is important because it develops <br />
                     your mind and gives you excessive knowledge
