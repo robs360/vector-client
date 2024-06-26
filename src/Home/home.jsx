@@ -53,6 +53,18 @@ const Home = () => {
             </div>
             <Importance></Importance>
             <Team></Team>
+            <div className="py-4 px-2 w-[97%] mx-auto bg-black my-20 rounded-md">
+                <h1 className="text-3xl text-center text-white
+                  font-medium">Students Review</h1>
+                <p className="text-center text-white mt-3">A "Meet the
+                    Team" page is a tab on a company's <br />
+                    website devoted to introducing a
+                    company's employees to customers. <br />
+
+                    This webpage also allows visitors
+                    to learn more about executives managing a company,  <br />
+                    which can establish credibility and promote transparency</p>
+            </div>
             <Review></Review>
         </div>
     )

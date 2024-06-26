@@ -55,7 +55,7 @@ const Team = () => {
                         <h1 className="text-center">Anisha</h1>
                         <p className="text-center text-orange-300">Physics Instructor</p>
                     </div>
-
+                     
                 </div>
             </div>
         </div>
