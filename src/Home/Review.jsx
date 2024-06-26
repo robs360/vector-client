@@ -18,12 +18,12 @@ const Review = () => {
             <div>
                 <img src={rev} className="w-[360px] md:w-[460px] rounded-md" alt="" srcset="" />
             </div>
-            <Carousel className="w-[365px] md:w-[520px] lg:w-[580px]"  autoPlay={true} infiniteLoop={true} interval={2000}>
+            <Carousel className="w-[365px] md:w-[430px] lg:w-[530px]"  autoPlay={true} infiniteLoop={true} interval={2000}>
                {
                 info.map(item=><div className="w-full
                 rounded-md shadow-xl p-2">
-                      <div className="w-full h-[90px] flex items-center justify-center bg-orange-300 rounded-md mt-2">
-                          <div className="w-[80px] h-[80px]">
+                      <div className="w-full h-[60px] flex items-center justify-center bg-orange-300 rounded-md mt-2">
+                          <div className="w-[70px] h-[70px]">
                                 <img src={item.image} className="w-full h-full rounded-[50%]" alt="" srcset="" />
                           </div>
                       </div>

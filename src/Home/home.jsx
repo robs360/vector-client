@@ -4,6 +4,7 @@ import banner from '../assets/images/banner2.jpg'
 import Importance from "./Important";
 import Team from "./Team";
 import Review from "./Review";
+import About from "./aboutus";
 const Home = () => {
     const bannerStyle = {
         backgroundImage: `url(${banner})`,
@@ -66,6 +67,7 @@ const Home = () => {
                     which can establish credibility and promote transparency</p>
             </div>
             <Review></Review>
+            <About></About>
         </div>
     )
 }
