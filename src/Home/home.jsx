@@ -5,6 +5,7 @@ import Importance from "./Important";
 import Team from "./Team";
 import Review from "./Review";
 import About from "./aboutus";
+import Footer from "./Footer";
 const Home = () => {
     const bannerStyle = {
         backgroundImage: `url(${banner})`,
@@ -68,6 +69,7 @@ const Home = () => {
             </div>
             <Review></Review>
             <About></About>
+            
         </div>
     )
 }

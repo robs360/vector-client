@@ -13,9 +13,9 @@ const HomeNav = () => {
             <div className="flex space-x-2 items-center">
                 <img src={logo} className="w-[55px] h-[55px] rounded-[50%]" alt="" srcset="" />
                 <div>
-                <h1 className="text-3xl text-black font-medium">Vector Classes</h1>
+                <h1 className="text-3xl text-black font-medium">Vector Flex</h1>
                 <h1 className="text-[16px] text-black">
-                        Since 2013 11 Years Experience</h1>
+                         11 Years Experience</h1>
                 </div>
             </div>
             <div className="grid grid-cols-3 gap-2 md:gap-5">
