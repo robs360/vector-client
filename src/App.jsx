@@ -8,11 +8,7 @@ function App() {
 
   return (
     <div>
-      {
-        location.pathname === '/' && (
-          <HomeNav />
-        )
-      }
+      <HomeNav />
       <Nav></Nav>
       <Outlet />
       <Footer></Footer>

@@ -36,6 +36,14 @@ const Nav = () => {
             >
                 read Vlog
             </NavLink>
+            <NavLink
+                to="/reg"
+                className={({ isActive, isPending }) =>
+                    isPending ? "font-medium" : isActive ? "rounded-md bg-gray-300 px-2 py-1" : "text-[16px]"
+                }
+            >
+                Register
+            </NavLink>
         </div>
     )
 }

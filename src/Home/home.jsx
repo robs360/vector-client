@@ -1,6 +1,6 @@
 import React from "react";
 import HomeNav from "./homeNav";
-import banner from '../assets/images/banner2.jpg'
+import banner from '../assets/images/banner4.jpg'
 import Importance from "./Important";
 import Team from "./Team";
 import Review from "./Review";
@@ -15,19 +15,23 @@ const Home = () => {
     };
     return (
         <div>
-            <div className="w-[98%] flex p-1 md:flex-row flex-col items-center gap-4 justify-end md:w-[80%] min-h-[70vh] mx-auto mt-12" style={bannerStyle}>
+            <div className="w-[98%] flex p-1 md:flex-row flex-col items-center gap-4 justify-center md:w-[95%] min-h-[75vh] mx-auto mt-12" style={bannerStyle}>
                 <div className="md:w-[540px] w-[340px]">
-                    <h1 className="text-3xl mb-2 font-medium">Effective Learning</h1>
-                    <p className="mb-4">Effective learning refers to a teaching and <br />
+                  
+                     <div className="p-3 rounded-md bg-black opacity-70">
+                     <h1 className="text-3xl mb-2 font-medium text-white">Effective Learning</h1>
+                    <p className="mb-4 text-white">Effective learning refers to a teaching and <br />
                         learning process that not only focuses on
                         the results achieved by students, but also <br />
                         emphasizes the understanding, intelligence,
                         perseverance, and quality of learning.</p>
+                    
 
                     <a className="text-[17px] text-yellow-100 font-medium"
                         href="https://typeset.io/questions/what-is-effective-learning-5edw2c0x4r">
                         Learn More
                     </a>
+                    </div>
                 </div>
                 <div>
                     <div class="flex bg-orange-300 rounded-lg ">

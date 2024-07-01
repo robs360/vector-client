@@ -12,11 +12,9 @@ const About = () => {
         backgroundRepeat: 'no-repeat',
     };
     return (
-        <div className="mt-16">
-            <div className="bg-black min-h-[20vh] flex items-center justify-center">
-                <h1 className="text-center text-4xl text-white">About Us</h1>
-            </div>
-            <div className="mt-10">
+        <div className="mt-20">
+           
+            <div className="mt-6">
                   <div className="w-[360px] md:w-[460px] mx-auto">
                         <h1 className="text-2xl font-medium text-center">Discover Vector Flex</h1>
                         <h1 className="text-2xl font-medium mt-1 text-center">Where Innovation Meet In A Point</h1>
@@ -26,31 +24,31 @@ const About = () => {
                   </div>
                   <div className="bg-orange-400 rounded-md flex space-x-4 p-2 gap-10
                   w-[95%] md:w-[70%] mx-auto -mt-[130px] min-h-[30vh] justify-evenly flex-wrap">
-                        <div className="w-[310px] rounded-md ml-3 shadow-xl bg-gradient-to-r from-cyan-500 to-blue-500 min-h-[220px] p-1">
+                        <div className="w-[300px] rounded-md ml-3 shadow-xl bg-gradient-to-r from-cyan-500 to-blue-500 min-h-[220px] p-1">
                         <img src={location} className="w-[75px] h-[75px] mx-auto
                         rounded-[50%] -mt-[30px]" alt="" srcset="" />
-                        <h1 className="text-white mt-2 font-medium">Level-4, Awal Centre, Banani, Dhaka</h1>
-                        <h1 className="text-white mt-2 font-medium">Support: web@programming-hero.com</h1>
-                        <h1 className="text-white mt-2 font-medium">(Available : Sat - Thu, 10:00 AM to 7:00 PM)</h1>
+                        <h1 className="text-white mt-2 font-medium p-2">Level-4, Awal Centre, Banani, Dhaka</h1>
+                        <h1 className="text-white mt-2 font-medium p-2">Support: web@programming-hero.com</h1>
+                        <h1 className="text-white mt-2 font-medium p-2">(Available : Sat - Thu, 10:00 AM to 7:00 PM)</h1>
                         </div>
-                        <div className="w-[310px] rounded-md shadow-xl bg-black bg-gradient-to-r from-yellow-300 to-yellow-400 p-1 min-h-[220px]">
+                        <div className="w-[300px] rounded-md shadow-xl bg-black bg-gradient-to-r from-yellow-300 to-yellow-400 p-1 min-h-[220px]">
                         <img src={purpose} className="w-[75px] h-[75px] mx-auto
                         rounded-[50%] -mt-[30px]" alt="" srcset="" />
                         <h1 className="text-white mt-2 font-medium text-center">
                             Create a center of creativity</h1>
-                            <p className="text-white mt-2 font-medium text-center">
+                            <p className="text-white mt-2 font-medium text-center p-2">
                                 Creativity is defined as the tendency to generate
                                  or recognize ideas, alternatives, or possibilities 
                                 that may be useful in solving problems,
                                  communicating with others,
                                   and entertaining ourselves and others</p>
                         </div>
-                        <div className="w-[310px] rounded-md shadow-xl bg-gradient-to-r from-pink-300 to-pink-400 min-h-[220px]">
+                        <div className="w-[300px] rounded-md shadow-xl bg-gradient-to-r from-pink-300 to-pink-400 min-h-[220px]">
                         <img src={achive} className="w-[75px] h-[75px] mx-auto
                         rounded-[50%] -mt-[30px]" alt="" srcset="" />
                               <h1 className="text-white mt-2 font-medium text-center">
                             Create a nation</h1>
-                            <p className="text-white mt-2 font-medium text-center">
+                            <p className="text-white mt-2 font-medium text-center p-2">
                                 Creativity is defined as the tendency to generate
                                  or recognize ideas, alternatives, or possibilities 
                                 that may be useful in solving problems,
