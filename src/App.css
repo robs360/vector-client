@@ -1,0 +1,45 @@
+
+  .drp{ 
+    position:absolute;
+    top:3.5rem;
+    right: -10px;
+    width: 116px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid gray;
+    z-index: 50;
+}
+.drp::before{
+    content: '';
+    position: absolute;
+    top: -2rem;
+    right: 2rem;
+    width: 25px;
+    height: 25px;
+    transform: rotate(45deg);
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    z-index: 50;
+    display: none;
+}
+.menu{
+    position:absolute;
+    width: 210px;
+    padding: 4px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid gray;
+}
+.menu::before{
+    content: '';
+    position: absolute;
+    top: -2rem;
+    right: 2rem;
+    width: 25px;
+    height: 25px;
+    transform: rotate(45deg);
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    display: none;
+}

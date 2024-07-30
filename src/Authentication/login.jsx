@@ -24,7 +24,12 @@ const Login = () => {
            Swal.fire("Login Successfully")
         })
         .catch(error=>{
-             console.log(error)
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Something went wrong!",
+                footer: '<a href="#">Why do I have this issue?</a>'
+              });
         })
     }
     return (

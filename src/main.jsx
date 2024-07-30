@@ -10,6 +10,8 @@ import Home from './Home/home.jsx';
 import Register from './Authentication/Register.jsx';
 import Login from './Authentication/login.jsx';
 import Authprovider from './Authprovider.jsx';
+import PostVlog from './Vlog/PostVlog.jsx';
+import Dash_outlet from './Dashboard/Dash_outlet.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,6 +28,11 @@ const router = createBrowserRouter([
       {
         path:'/log',
         element:<Login></Login>
+      },
+      {
+        path:'/dash',
+        element:<Dash_outlet></Dash_outlet>
+        
       }
     ]
   },

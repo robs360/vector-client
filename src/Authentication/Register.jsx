@@ -9,8 +9,14 @@ import { AuthContext } from "../Authprovider";
 import Swal from "sweetalert2";
 import { getAuth, updateProfile } from "firebase/auth";
 import app from "../firebase.config";
-
+import reg from '../assets/images/reg.jpg'
 const Register = () => {
+    const bannerStyle = {
+        backgroundImage: `url(${reg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'right',
+        backgroundRepeat: 'no-repeat',
+    };
     const auth=getAuth(app)
     const {createUser,user}=useContext(AuthContext)
     console.log("it is user ",user)
@@ -32,30 +38,47 @@ const Register = () => {
         })
         .then(()=>{
             console.log("Yes")
+            const uSer={Name,Email}
+            fetch('http://localhost:5000/users',{
+                method:'POST',
+                headers:{
+                    'content-type':'application/json',
+                },
+                body:JSON.stringify(uSer)
+            })
+            .then(res=>res.json())
+            .then(data=>console.log(data))
         })
         .catch((error)=>{
              console.log("no")
         })
+
        })
        .catch(error=>{
-
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+            footer: '<a href="#">Why do I have this issue?</a>'
+          });
        })
     }
     return (
         <div className="w-[97%] mx-auto min-h-[90vh] py-4 rounded-sm mt-8 
-        flex items-center justify-center">
+        flex items-center justify-center" style={bannerStyle}>
             <div className="w-[96%] md:w-[90%] lg:w-[80%] min-h-[80vh]
-            bg-white shadow-2xl rounded-md">
+            bg-white opacity-90 shadow-2xl rounded-md">
                 <motion.div
                     initial={{ opacity: 0, x: 380 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{
                         duration: 1
                     }}
-                    className="flex w-[280px] mx-auto mt-4 items-center">
+                    className="bg-gradient-to-r from-cyan-500 to-blue-500
+                     flex w-full py-3 mx-auto rounded-t-md items-center justify-center">
                     <h1 className="text-3xl text-center mx-auto font-semibold">
                         Register Here</h1>
-                    <FaPlus className="text-2xl"></FaPlus>
+                    
                 </motion.div>
 
                 <div className="flex justify-center md:flex-row flex-col-reverse items-center mt-12 gap-4">

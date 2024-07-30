@@ -22,7 +22,7 @@ const About = () => {
                   <div className="w-[98%] md:w-[80%] mt-14  mx-auto min-h-[60vh]" style={bannerStyle}>
                        
                   </div>
-                  <div className="bg-orange-400 rounded-md flex space-x-4 p-2 gap-10
+                  <div className="rounded-md flex space-x-4 p-2 gap-10
                   w-[95%] md:w-[70%] mx-auto -mt-[130px] min-h-[30vh] justify-evenly flex-wrap">
                         <div className="w-[300px] rounded-md ml-3 shadow-xl bg-gradient-to-r from-cyan-500 to-blue-500 min-h-[220px] p-1">
                         <img src={location} className="w-[75px] h-[75px] mx-auto
