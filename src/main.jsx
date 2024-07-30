@@ -12,6 +12,7 @@ import Login from './Authentication/login.jsx';
 import Authprovider from './Authprovider.jsx';
 import PostVlog from './Vlog/PostVlog.jsx';
 import Dash_outlet from './Dashboard/Dash_outlet.jsx';
+import Read_Vlog from './Read_Vlog.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,9 +31,13 @@ const router = createBrowserRouter([
         element:<Login></Login>
       },
       {
+        path:'/read_vlog',
+        element:<Read_Vlog></Read_Vlog>
+      },
+      {
         path:'/dash',
         element:<Dash_outlet></Dash_outlet>
-        
+
       }
     ]
   },

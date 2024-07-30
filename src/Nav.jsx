@@ -38,7 +38,7 @@ const Nav = () => {
                     Quiz Test
                 </NavLink>
                 <NavLink
-                    to="/redvlog"
+                    to="/read_vlog"
                     className={({ isActive, isPending }) =>
                         isPending ? "font-medium" : isActive ? "rounded-md bg-gray-300 px-2 py-1" : "text-[16px]"
                     }
@@ -97,7 +97,7 @@ const Nav = () => {
                 <NavLink onClick={()=>{
                             setVisit(false)
                         }}
-                    to="/redvlog"
+                    to="/read_vlog"
                     className={({ isActive, isPending }) =>
                         isPending ? "font-medium" : isActive ? "rounded-md bg-gray-300 px-2 py-1 font-medium text-[16px]" : "text-[16px]  font-medium"
                     }
