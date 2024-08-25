@@ -1,41 +1,64 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import person from './assets/images/person1.jpg'
 import book from './assets/images/book.jpg'
-const Read_Vlog=()=>{
-    return(
-        <div className="mx-auto w-[360px] md:w-[540px] lg:w-[750px] mt-2">
-             
-                  <div className="w-full flex justify-between">
-                      <h1 className="text-2xl font-medium">
-                        Lorem ipsum dolor sit amet</h1>
-                      <div>
-                         <img src={person} className="w-[45px] h-[45px] rounded-[50%]"
-                          alt="" srcset="" />
-                      </div>
-                  </div>
-                  <div className="w-full mt-2">
-                     <img src={book} className="w-full mb-2 h-[380px]" alt="" srcset="" />
-                     <p className="font-medium">Lorem ipsum dolor sit amet consectetur adipisicing 
-                        elit. Neque ducimus, voluptatibus enim repellat
-                         facilis nemo ut perspiciatis veniam est molestiae. 
-                         Fugit, voluptatem! Iste non reiciendis debitis
-                          nesciunt, consequatur cumque eligendi facere 
-                          natus! Quasi tempora saepe eum odio, cum dolor
-                           nesciunt repellendus suscipit molestias! Non 
-                           perferendis animi, blanditiis harum provident
-                            recusandae quas aliquam doloremque corporis 
-                            a pariatur corrupti commodi. Sequi culpa nihil 
-                            incidunt consequuntur doloribus amet quo rem, 
-                            
-                            fugit aspernatur beatae quae placeat minima, 
-                            eveniet saepe quasi error, est voluptatibus 
-                            voluptas minus repellat soluta quisquam?
-                             Voluptates, dolores. Pariatur cupiditate 
-                             perferendis id adipisci! Recusandae culpa eius 
-                        neque repudiandae quibusdam enim aperiam praesentium.</p>
-                  </div>
-           
-        </div>
+import { FaRegComment, FaThumbsUp } from "react-icons/fa6";
+import { FaRegSave } from "react-icons/fa";
+const Read_Vlog = () => {
+    const [post, setPost] = useState([]);
+    const [color, setColor] = useState(false)
+    const [arr2, setArr2] = useState(() => {
+        return JSON.parse(localStorage.getItem('arr')) || [];
+    });
+    useEffect(() => {
+        fetch('http://localhost:5000/read_post')
+            .then(res => res.json())
+            .then(data => setPost(data))
+    }, [])
+    console.log(post)
+    const handleColor = (id) => {      
+        let arr=JSON.parse(localStorage.getItem('arr')) || [];
+
+        if(arr.includes(id)){
+             arr=arr.filter(info=>info!=id)
+        }
+        else{
+            arr.push(id)
+        }
+        localStorage.setItem('arr', JSON.stringify(arr));
+        
+       setArr2(arr)
+    }
+    
+    console.log(arr2)
+    return (
+        post?.map(info => <div className="mx-auto w-[360px] mb-12 md:w-[540px] lg:w-[750px]">
+
+            <div className="w-full flex justify-between">
+                <h1 className="text-2xl font-medium">
+                    {info.title}</h1>
+                <div>
+                    <img src={info.author} className="w-[45px] h-[45px] rounded-[50%]"
+                        alt="" srcset="" />
+                </div>
+            </div>
+            <div className="w-full mt-2">
+                <img src={info.image} className="w-full mb-2 h-[380px]" alt="" srcset="" />
+                <p className="text-[17px] mt-3">
+                    {info.vlog}
+                </p>
+            </div>
+            <div className="justify-evenly w-full flex items-center px-2 rounded-2xl mt-6 border-black h-[40px]">
+                <button className="flex" onClick={() => {
+                    handleColor(info._id)
+                }
+                }><FaThumbsUp className={`text-[22px] ${arr2.includes(info._id) ? 'text-orange-400' : 'text-black'}`} />
+                    <span className="text-[17px] font-medium ml-2">{info.react}</span></button>
+                <button> <FaRegComment className="text-[20px]" />
+                </button>
+                <button className="text-[17px] font-medium flex items-center"><FaRegSave className='text-[22px]' />
+                    <span className="ml-2 text-orange-400">Save It</span></button>
+            </div>
+        </div>)
     )
 }
 

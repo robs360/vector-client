@@ -15,8 +15,8 @@ const Home = () => {
     };
     return (
         <div>
-            <div className="w-[98%] flex p-1 md:flex-row flex-col items-center gap-4 justify-center md:w-[95%] min-h-[75vh] mx-auto mt-12" style={bannerStyle}>
-                <div className="md:w-[540px] w-[340px]">
+            <div className="w-[98%] flex p-1 md:flex-row flex-col  gap-4 justify-center items-start md:w-[95%] min-h-[75vh] mx-auto mt-12" style={bannerStyle}>
+                <div className="md:w-[540px] w-[340px] mt-6">
                   
                      <div className="p-3 rounded-md bg-black opacity-70">
                      <h1 className="text-3xl mb-2 font-medium text-white">Effective Learning</h1>
@@ -33,7 +33,7 @@ const Home = () => {
                     </a>
                     </div>
                 </div>
-                <div>
+                <div className="mt-6">
                     <div class="flex bg-orange-300 rounded-lg ">
                         <div class="p-10 relative">
                             <h1 class="text-3xl md:text-4xl font-medium">15% OFF</h1>
