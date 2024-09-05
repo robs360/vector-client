@@ -1,35 +1,67 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import person from './assets/images/person1.jpg'
 import book from './assets/images/book.jpg'
 import { FaRegComment, FaThumbsUp } from "react-icons/fa6";
 import { FaRegSave } from "react-icons/fa";
+import { AuthContext } from "./Authprovider";
 const Read_Vlog = () => {
+    const {user}=useContext(AuthContext)
     const [post, setPost] = useState([]);
-    const [color, setColor] = useState(false)
-    const [arr2, setArr2] = useState(() => {
-        return JSON.parse(localStorage.getItem('arr')) || [];
-    });
+    const [arr2, setArr2] = useState([])
+    
     useEffect(() => {
         fetch('http://localhost:5000/read_post')
             .then(res => res.json())
             .then(data => setPost(data))
     }, [])
-    console.log(post)
-    const handleColor = (id) => {      
-        let arr=JSON.parse(localStorage.getItem('arr')) || [];
-
-        if(arr.includes(id)){
-             arr=arr.filter(info=>info!=id)
-        }
-        else{
-            arr.push(id)
-        }
-        localStorage.setItem('arr', JSON.stringify(arr));
         
-       setArr2(arr)
-    }
+        useEffect(()=>{
+            fetch(`http://localhost:5000/get_user`)
+            .then(res=>res.json())
+            .then(data=>{
+                const filterdData=data.filter(info=>info.Email===user?.email)
+                setArr2(filterdData[0].liked)
+                
+            })
+        },[user?.email])
+
+    console.log(post)
+    const handleColor = (id) => {
+        
+         if(!arr2.includes(id)){
+            let updatedArr2 = [...arr2, id];
+            setArr2(updatedArr2)
+            fetch(`http://localhost:5000/liked/${user.email}`,{
+                method:"PUT",
+                headers:{
+                    'content-type': 'application/json',
+                },
+                body:JSON.stringify(updatedArr2)
+            })
+            .then(res=>res.json())
+            .then(data=>console.log(data))
+            fetch(`http://localhost:5000/react/${id}`,{
+                method:'PUT',
+                headers:{
+                    'content-type':'application/json'
+                },
+                
+            })
     
+            .then(res=>res.json())
+            .then(data=>{
+                console.log(data)
+                fetch('http://localhost:5000/read_post')
+                .then(res => res.json())
+                .then(data => setPost(data))
+            })
+         }
+         else{
+            return
+         }
+    }
     console.log(arr2)
+    
     return (
         post?.map(info => <div className="mx-auto w-[360px] mb-12 md:w-[540px] lg:w-[750px]">
 
@@ -56,7 +88,7 @@ const Read_Vlog = () => {
                 <button> <FaRegComment className="text-[20px]" />
                 </button>
                 <button className="text-[17px] font-medium flex items-center"><FaRegSave className='text-[22px]' />
-                    <span className="ml-2 text-orange-400">Save It</span></button>
+                    <span className="ml-2">Save It</span></button>
             </div>
         </div>)
     )
