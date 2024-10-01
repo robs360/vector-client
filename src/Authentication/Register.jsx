@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 import { motion } from "framer-motion"
 import { FaClipboardCheck, FaPlus } from "react-icons/fa6";
@@ -11,16 +11,12 @@ import { getAuth, updateProfile } from "firebase/auth";
 import app from "../firebase.config";
 import reg from '../assets/images/reg.jpg'
 const Register = () => {
-    const bannerStyle = {
-        backgroundImage: `url(${reg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'right',
-        backgroundRepeat: 'no-repeat',
-    };
+    
+    const [liked,setLiked]=useState([])
     const auth=getAuth(app)
     const {createUser,user}=useContext(AuthContext)
-    console.log("it is user ",user)
-    
+   
+   
     const handleSubmit=(e)=>{
        e.preventDefault();
        const Name=e.target.name.value;
@@ -38,7 +34,7 @@ const Register = () => {
         })
         .then(()=>{
             console.log("Yes")
-            const uSer={Name,Email}
+            const uSer={Name,Email,liked}
             fetch('http://localhost:5000/users',{
                 method:'POST',
                 headers:{
@@ -63,6 +59,12 @@ const Register = () => {
           });
        })
     }
+    const bannerStyle = {
+        backgroundImage: `url(${reg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'right',
+        backgroundRepeat: 'no-repeat',
+    };
     return (
         <div className="w-[97%] mx-auto min-h-[90vh] py-4 rounded-sm mt-8 
         flex items-center justify-center" style={bannerStyle}>

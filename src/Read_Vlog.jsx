@@ -20,6 +20,7 @@ const Read_Vlog = () => {
             .then(res=>res.json())
             .then(data=>{
                 const filterdData=data.filter(info=>info.Email===user?.email)
+                console.log(data)
                 setArr2(filterdData[0].liked)
                 
             })

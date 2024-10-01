@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "firebase": "^10.12.2",
     "framer-motion": "^11.2.12",
     "localforage": "^1.10.0",
@@ -23,7 +24,7 @@
     "react-router-dom": "^6.23.1",
     "sort-by": "^1.2.0",
     "sweetalert2": "^11.12.1",
-    "swiper": "^11.1.4"
+    "swiper": "^11.1.14"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

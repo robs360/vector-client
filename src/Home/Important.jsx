@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import read from '../assets/images/reding.webp'
 import write from '../assets/images/writeing.avif'
 import think from '../assets/images/think.jpg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Importance = () => {
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Animation duration in milliseconds
+        });
+      }, []);
     return (
         <div className="w-[97%] mx-auto mt-28 p-2 text-white">
             <div className="mb-16 bg-black rounded-md py-2">
@@ -16,7 +23,7 @@ const Importance = () => {
                     and enhances your creative ability. </p>
             </div>
             <div className="w-[97%] md:w-[94%] mx-auto">
-                <div className="rounded-md border-[1px] flex gap-4 flex-col items-center md:flex-row shadow-xl p-2">
+                <div  data-aos="flip-up" className="rounded-md border-[1px] flex gap-3 flex-col items-center md:flex-row shadow-xl p-2">
                     <div>
                         <img className="w-[250px] h-[210px] rounded-md" src={read} alt="" srcset="" />
                     </div>
@@ -36,7 +43,7 @@ const Importance = () => {
                           has numerous benefits</p>
                     </div>
                 </div>
-                <div className="rounded-md flex gap-4 flex-col items-center md:flex-row border-[1px] shadow-xl my-5 p-2">
+                <div data-aos="flip-up" className="rounded-md border-[1px] flex gap-3 flex-col items-center md:flex-row shadow-xl p-2">
                     <div>
                         <img className="w-[250px] h-[210px] rounded-md" src={write} alt="" srcset="" />
                     </div>
@@ -56,7 +63,7 @@ const Importance = () => {
                           has numerous benefits</p>
                     </div>
                 </div>
-                <div className="rounded-md flex gap-4 flex-col items-center md:flex-row border-[1px] shadow-xl p-2">
+                <div data-aos="flip-up"  className="rounded-md border-[1px] flex gap-3 flex-col items-center md:flex-row shadow-xl p-2">
                     <div>
                     <img className="w-[250px] h-[210px] rounded-md" src={think} alt="" srcset="" />
                     </div>

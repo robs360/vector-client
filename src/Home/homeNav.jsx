@@ -9,7 +9,8 @@ import research from '../assets/images/research.avif'
 
 const HomeNav = () => {
     return (
-        <div className="w-[97%] p-2 gap-4 mx-auto bg-black flex justify-between flex-col md:flex-row items-center rounded-md">
+       <div className="w-[95%] mx-auto block border-2 border-black">
+         <div className="w-full p-2 gap-4 opacity-70 mx-auto bg-black flex justify-between flex-col md:flex-row items-center rounded-md">
             <div className="flex space-x-2 items-center">
                 <img src={research} className="w-[55px] h-[55px] rounded-[50%]" alt="" srcset="" />
                 <div>
@@ -37,6 +38,7 @@ const HomeNav = () => {
                 </div>
             </div>
         </div>
+       </div>
     )
 }
 export default HomeNav

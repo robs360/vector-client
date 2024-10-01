@@ -18,8 +18,8 @@ const Nav = () => {
         })
     }
     return (
-        <div className="flex items-center justify-between border-b-[3px] mt-4 w-[96%] mx-auto">
-            <div className="hidden mt-6 w-[97%] py-2 mx-auto font-medium lg:flex space-x-4 items-center">
+        <div className="flex items-center justify-between border-b-[3px] w-[96%] mx-auto">
+            <div className="hidden mt-6 w-[97%] py-2 mx-auto font-medium lg:flex space-x-7 items-center">
                 <NavLink
                     to="/"
                     className={({ isActive, isPending }) =>
@@ -70,7 +70,7 @@ const Nav = () => {
                     else{
                         setVisit(true)
                     }
-                }}><FaBars className="text-3xl text-black mt-2"></FaBars></button>
+                }}><FaBars className="text-xl font-normal text-black mt-2"></FaBars></button>
                  {
                     visit?(<div className="flex flex-col space-y-2 menu top-14 z-50">
                         <NavLink onClick={()=>{

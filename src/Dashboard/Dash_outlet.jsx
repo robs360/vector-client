@@ -12,9 +12,7 @@ const Dash_outlet=()=>{
                      <Link className="text-white flex items-center">
                        <FaBook className="mr-1"></FaBook> Post Vlog</Link>
                   </div>
-                  <div>
-                     
-                  </div>
+                 
                </div>
         </div>
     )
