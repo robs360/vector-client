@@ -9,7 +9,7 @@ import person6 from '../assets/images/person6.jpg'
 const Team = () => {
     return (
         <div className="mt-24">
-            <div className="py-4 px-2 w-[97%] mx-auto bg-black rounded-md">
+            <div className="py-4 px-2 mx-auto bg-gray-800 opacity-80">
                 <h1 className="text-3xl text-center text-white
                   font-medium">Meet Our Team</h1>
                 <p className="text-center text-white mt-3">A "Meet the

@@ -59,7 +59,7 @@ const Home = () => {
             </div>
             <Importance></Importance>
             <Team></Team>
-            <div className="py-4 px-2 w-[97%] mx-auto bg-black my-20 rounded-md">
+            <div className="py-4 px-2 w-full mx-auto bg-gray-800 opacity-80 my-20">
                 <h1 className="text-3xl text-center text-white
                   font-medium">Students Review</h1>
                 <p className="text-center text-white mt-3">A "Meet the

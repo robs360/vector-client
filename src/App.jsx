@@ -8,10 +8,13 @@ function App() {
 
   return (
     <div>
-      <HomeNav />
+      <div className=""><HomeNav /></div>
+      <div className="mt-10">
       <Nav></Nav>
       <Outlet />
       <Footer></Footer>
+      </div>
+      
     </div>
   );
 }

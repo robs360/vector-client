@@ -27,9 +27,9 @@ const Review = () => {
                                 <img src={item.image} className="w-full h-full rounded-[50%]" alt="" srcset="" />
                           </div>
                       </div>
-                       <h1 className="text-center text-2xl mt-2 font-medium">{item.name}</h1>
-                       <h1 className="text-center mt-2 font-medium text-gray-500">Client</h1>
-                       <p className="mt-2 text-center">Lorem ipsum dolor sit amet consectetur
+                       <h1 className="text-center text-2xl mt-2 font-medium text-white">{item.name}</h1>
+                       <h1 className="text-center mt-2 font-medium text-white">Client</h1>
+                       <p className="mt-2 text-center text-white">Lorem ipsum dolor sit amet consectetur
                          adipisicing elit. Esse ex adipisci unde. Lorem ipsum dolor 
                          sit amet consectetur adipisicing elit.</p>
                          <div className="flex justify-center space-x-2 mt-2">

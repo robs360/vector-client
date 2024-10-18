@@ -11,8 +11,8 @@ const Importance = () => {
         });
       }, []);
     return (
-        <div className="w-[97%] mx-auto mt-28 p-2 text-white">
-            <div className="mb-16 bg-black rounded-md py-2">
+        <div className="w-full mx-auto mt-28 p-2 text-white">
+            <div className="mb-16 bg-gray-800 opacity-80 py-2">
                 <h1 className="text-3xl text-center font-medium">Importance of a coaching</h1>
                 <p className="mt-2 text-center">Reading is important because it develops <br />
                     your mind and gives you excessive knowledge
@@ -23,13 +23,13 @@ const Importance = () => {
                     and enhances your creative ability. </p>
             </div>
             <div className="w-[97%] md:w-[94%] mx-auto">
-                <div  data-aos="flip-up" className="rounded-md border-[1px] flex gap-3 flex-col items-center md:flex-row shadow-xl p-2">
+                <div  data-aos="flip-up" className="rounded-md border-[1px] border-orange-300 flex gap-3 flex-col items-center md:flex-row shadow-xl p-2">
                     <div>
                         <img className="w-[250px] h-[210px] rounded-md" src={read} alt="" srcset="" />
                     </div>
                     <div className="w-full md:w-[70%]">
-                        <h1 className="text-3xl font-medium mt-2 text-black text-center">Reading Book</h1>
-                       <p className="text-black">Reading is important because it
+                        <h1 className="text-3xl font-medium mt-2 text-white text-center">Reading Book</h1>
+                       <p className="text-white">Reading is important because it
                          develops your mind and gives you
                           excessive knowledge and lessons
                            of life. It helps you understand
@@ -43,13 +43,13 @@ const Importance = () => {
                           has numerous benefits</p>
                     </div>
                 </div>
-                <div data-aos="flip-up" className="rounded-md border-[1px] flex gap-3 flex-col items-center md:flex-row shadow-xl p-2">
+                <div data-aos="flip-up" className="my-5 rounded-md border-[1px] border-orange-300 flex gap-3 flex-col items-center md:flex-row shadow-xl p-2">
                     <div>
                         <img className="w-[250px] h-[210px] rounded-md" src={write} alt="" srcset="" />
                     </div>
                     <div className="w-full md:w-[70%]">
-                        <h1 className="text-3xl font-medium mt-2 text-black text-center">Writing</h1>
-                       <p className="text-black">Wring is important because it
+                        <h1 className="text-3xl font-medium mt-2 text-white text-center">Writing</h1>
+                       <p className="text-white">Wring is important because it
                          develops your mind and gives you
                           excessive knowledge and lessons
                            of life. It helps you understand
@@ -63,13 +63,13 @@ const Importance = () => {
                           has numerous benefits</p>
                     </div>
                 </div>
-                <div data-aos="flip-up"  className="rounded-md border-[1px] flex gap-3 flex-col items-center md:flex-row shadow-xl p-2">
+                <div data-aos="flip-up"  className="rounded-md border-[1px] border-orange-300 flex gap-3 flex-col items-center md:flex-row shadow-xl p-2">
                     <div>
                     <img className="w-[250px] h-[210px] rounded-md" src={think} alt="" srcset="" />
                     </div>
                     <div className="w-full md:w-[70%]">
-                        <h1 className="text-3xl font-medium mt-2 text-black text-center">Thinking Proccess</h1>
-                       <p className="text-black">Thinking Proccess is important because it
+                        <h1 className="text-3xl font-medium mt-2 text- text-white enter">Thinking Proccess</h1>
+                       <p className="text-white">Thinking Proccess is important because it
                          develops your mind and gives you
                           excessive knowledge and lessons
                            of life. It helps you understand
